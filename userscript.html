@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UserScripts oleh Mod @mansitee</title>
+  <meta name="msapplication-TileColor" content="#f4f4f4">
+	<meta name="theme-color" content="#f4f4f4">
+	
+  <meta name="description" content="Daftar lengkap UserScript Mod dari GitHub mansitee/userscript. Modern, responsif, dan tanpa limit.">
+  
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --card-bg: #fff;
+      --primary: #007bff;
+      --radius: 1rem;
+      --radius2: 0.5rem;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+/* Reset dan Box Model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scroll behavior smooth untuk semua browser modern */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hilangkan scrollbar (semua browser utama) */
+body::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent;
+}
+
+/* Seleksi teks */
+::selection,
+::-moz-selection {
+  background-color: #34ad54;
+  color: #fff;
+}
+
+/* Elemen dasar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #263a4f;
+  background-color: #fff;
+}
+
+/* Tautan */
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+/* Tombol */
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Input number tanpa panah */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Heading */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #263a4f;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg);
+      color: #333;
+    }
+
+    header {
+      background: var(--bg);
+      color: #111;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    header h1 a {
+      color: #111;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 1rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    #total {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+ 
+    .grid {
+      display: grid;
+      gap:.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius2);
+      padding: 0.6rem;
+      tbox-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      margin: 0 0 0.5rem;
+      word-break: break-word;
+    }
+
+    .card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card small {
+    background: #f0f8ff;
+      display: block;
+      margin-top: 0.5rem;
+      padding: 0.4rem 0.4rem;
+      border-radius: var(--radius2);
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    .skeleton {
+      background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: var(--radius);
+      height: 120px;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+  
+  
+  <!-- Tambahkan sebelum </body> -->
+
+nav{position: fixed;
+    top: 2rem;
+    left: 1rem;
+    z-index: 9999;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: opacity 0.3s;
+  }
+  
+  .tabbar {
+    position: fixed;
+    bottom:0.8rem; /* melayang di atas */
+    left: 1rem;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    z-index: 9999;
+    padding: 0.4rem 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.3s;
+  }
+
+  .tabbar .tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .tabbar .icon {
+    display: block;
+  }
+
+  .tabbar .tab:hover {
+    background: #f0f8ff;
+    border-radius: 999px;
+  }
+
+  @media (max-width: 500px) {
+    .tabbar {
+      padding: 0.3rem 0.6rem;
+    }
+
+    .tabbar .label {
+      font-size: 0.85rem;
+    }
+
+    .tabbar .icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  
+  
+  .warning-card {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin: 1rem auto;
+  font-size: 0.9rem;
+  max-width: 900px;
+  box-shadow: var(--shadow);
+  line-height: 1.4;
+}
+
+.warning-card a {
+  color: #664d03;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+</style>
+</head>
+<body>
+	
+<nav class="tabbar">
+  <a href="javascript:history.back()" class="tab">
+     
+    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+    <span class="label">Return</span>
+  </a>
+</nav>
+
+
+  
+
+  <main>
+  	
+ <!-- Kartu Peringatan -->
+<div class="warning-card">
+  <strong>⚠ Warning:</strong> All Userscript on this page comes from official and mod sources <a href="https://mansitee.github.io/redirect.html?to=https://github.com/mansitee/userscript" target="_blank">Me</a>, <strong> <a href="https://GreasyFork.org" target="_blank">GreasyFork</a>, <a href="https://mansitee.github.io/redirect.html?to=https://github.com/topics/userscripts" target="_blank">Tampermonkey</a>, User <a href="https://mansitee.github.io/redirect.html?to=https://github.com/" target="_blank">Github</a>, AI, Internet</strong>.  
+  Copyright is entirely owned by the maker/owner of each script.    Files are saved and managed with free hosting on Github
+</div> 	
+    <div id="total">Contains a total script...</div>
+    <div id="script-list" class="grid">
+      <!-- Skeleton awal -->
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+  </main>
+
+  <script>
+    const repo = "mansitee/userScript";
+    const apiURL = `https://api.github.com/repos/${repo}/contents/?per_page=100`;
+    const container = document.getElementById("script-list");
+    const totalDiv = document.getElementById("total");
+
+    let scripts = [];
+    let page = 0;
+    const pageSize = 10;
+    let loading = false;
+ 
+    async function fetchScripts() {
+      try {
+        const res = await fetch(apiURL);
+        const data = await res.json();
+        scripts = data.filter(file => file.name.endsWith(".user.js"));
+        totalDiv.textContent = `Total Script: ${scripts.length}`;
+        container.innerHTML = "";
+        loadNextPage();
+        window.addEventListener("scroll", onScroll);
+      } catch (e) {
+        container.innerHTML = "<p style='color:red;font-size: 1.9rem;font-weight: 500;text-align:center;'>Failed to load data.</p>";
+        totalDiv.textContent = "";
+        console.error(e);
+      }
+    }
+
+    function onScroll() {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !loading) {
+        loadNextPage();
+      }
+    }
+
+    function loadNextPage() {
+      loading = true;
+
+      const start = page * pageSize;
+      const end = start + pageSize;
+      const batch = scripts.slice(start, end);
+
+      if (batch.length === 0) {
+        window.removeEventListener("scroll", onScroll);
+        return;
+      }
+
+      const skeletons = [];
+      for (let i = 0; i < batch.length; i++) {
+        const skel = document.createElement("div");
+        skel.className = "card skeleton";
+        container.appendChild(skel);
+        skeletons.push(skel);
+      }
+
+      setTimeout(() => {
+        batch.forEach((script, i) => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <h2>${script.name}</h2>
+              <small> <a href="https://mansitee.github.io/redirect.html?to=${script.download_url}" target="_blank">📥 Install Script</a> 
+           |  Size: ${(script.size / 1024).toFixed(1)} KB |  
+            <a href="https://mansitee.github.io/redirect.html?id=${script.html_url}.html" target="_blank">GitHub</a></small>
+          `;
+          container.replaceChild(card, skeletons[i]);
+        });
+
+        page++;
+        loading = false;
+      }, 800);
+    }
+
+    fetchScripts();
+  </script>
+</body>
+</html>
